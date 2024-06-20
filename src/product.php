@@ -13,4 +13,18 @@ class Product
     private int | null $id = null;
     #[ORM\Column(type: 'string')]
     private string $name;
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
 }
